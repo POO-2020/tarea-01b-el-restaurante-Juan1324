@@ -1,4 +1,4 @@
-class Direccion{
+export default class Direccion{
     constructor(calle,numeroExterior,numeroInterior,colonia,codigoPostal,ciudad,municipio){
         this.calle=calle;
         this.numeroExterior=numeroExterior;

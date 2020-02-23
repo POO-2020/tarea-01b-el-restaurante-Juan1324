@@ -29,6 +29,9 @@ export default class Fecha{
         let totalDias = Math.trunc(this.difFecha/canDias)
         return (`${totalDias}`);
     }
+    getFecha(){
+        return(`${this.fecha.getDate()}/${this.mesAño[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`);
 
+    }
     
 }

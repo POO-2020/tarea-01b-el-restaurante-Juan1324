@@ -19,22 +19,6 @@ export default class Fecha{
         let totalMeses = Math.trunc(this.difFecha/canMeses)
         return (`${totalMeses}`);
     }
-    getSemanas(){
-        let canSemanas = (1000 * 60 * 60 * 24 * 365)/52;
-        let totalSemanas = Math.trunc(this.difFecha/canSemanas)
-        return (`${totalSemanas}`);
-    }
-    getDias(){
-        let canDias = 1000 * 60 * 60 * 24;
-        let totalDias = Math.trunc(this.difFecha/canDias)
-        return (`${totalDias}`);
-    }
-    getFecha(){
-        return(`${this.fecha.getDate()}/${this.mesAño[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`);
-    }
-    getDiaFEcha(){
-        return(`${this.diaSemana[this.fecha.getDay()]}`);
 
-    }
     
 }

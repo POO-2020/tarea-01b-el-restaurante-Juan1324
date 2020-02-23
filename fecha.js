@@ -24,5 +24,11 @@ export default class Fecha{
         let totalSemanas = Math.trunc(this.difFecha/canSemanas)
         return (`${totalSemanas}`);
     }
+    getDias(){
+        let canDias = 1000 * 60 * 60 * 24;
+        let totalDias = Math.trunc(this.difFecha/canDias)
+        return (`${totalDias}`);
+    }
+
     
 }

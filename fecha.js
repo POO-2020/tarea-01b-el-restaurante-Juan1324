@@ -31,6 +31,9 @@ export default class Fecha{
     }
     getFecha(){
         return(`${this.fecha.getDate()}/${this.mesAño[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`);
+    }
+    getDiaFecha(){
+        return(`${this.diaSemana[this.fecha.getDay()]}`);
 
     }
     

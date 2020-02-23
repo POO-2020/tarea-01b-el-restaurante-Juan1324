@@ -19,6 +19,10 @@ export default class Fecha{
         let totalMeses = Math.trunc(this.difFecha/canMeses)
         return (`${totalMeses}`);
     }
-
+    getSemanas(){
+        let canSemanas = (1000 * 60 * 60 * 24 * 365)/52;
+        let totalSemanas = Math.trunc(this.difFecha/canSemanas)
+        return (`${totalSemanas}`);
+    }
     
 }

@@ -11,4 +11,7 @@ export default class Restaurante{
     registrarProducto(producto){  
         this.productos.push(producto)
     }
+    registrarPedido(pedido){
+        this.pedidos.push(pedido)
+    }
 }

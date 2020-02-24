@@ -27,5 +27,7 @@ export default class Pedido{
         })
         return (`${new Precio(costo).getPrecio()}`)
     }
-
+    agregarElemento(elemento1){
+        return (`${this.NuelementosPedidos.push(elemento1)}`)
+    }      
 }

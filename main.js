@@ -27,12 +27,20 @@ class Main{
 
  
     }
-    
     probarTiempo(){
     console.log("////////////////////Tiempo///////////////////////////////////")
     console.log(this.hora1.getFormato12())
     console.log(this.hora1.getFormato24())
 
+    }
+    probarFecha(){
+        console.log("////////////////////Fecha///////////////////////////////////")
+        console.log(`Años: ${this.años.getAños()}`);
+        console.log(`Meses: ${this.años.getMeses()}`);
+        console.log(`Semana: ${this.años.getSemanas()}`);
+        console.log(`Dias: ${this.años.getDias()}`);
+        console.log(`Fecha: ${this.años.getFecha()}`);
+        console.log(`Dia de la semana: ${this.años.getDiaFecha()}`);
     }
     probarCliente(){
         console.log("////////////////////Cliente///////////////////////////////////")
@@ -74,6 +82,7 @@ class Main{
 let app=new Main();
 app.probarCliente();
 app.probarTiempo();
+app.probarFecha();
 app.probarDireccion();
 app.probarPrecio();
 app.probarProducto();

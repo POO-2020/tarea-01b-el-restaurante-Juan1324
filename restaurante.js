@@ -19,4 +19,9 @@ export default class Restaurante{
             console.log('Los productos son:', producto.getDescripcion())
         })
     }
+    listarPedidos(){
+        this.pedidos.forEach(pedido =>{
+        console.log('Los pedidos son:', pedido.getResumen())
+        })
+    }
 }

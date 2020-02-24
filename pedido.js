@@ -10,3 +10,4 @@ export default class Pedido{
         this.cliente = cliente;
         this.NuelementosPedidos = []
     }
+}

@@ -1,5 +1,11 @@
 class ElementoPedido{
-    constructor(){
-        
+
+    constructor(cantidad, producto){
+        this.producto = producto;
+        this.cantidad = cantidad;
+    }
+    
+    getDescripcion(){
+        return (`${this.cantidad} x ${this.producto.getDescripcion()}`)
     }
 }

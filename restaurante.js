@@ -8,4 +8,7 @@ export default class Restaurante{
         this.productos = []
         this.pedidos = []
     }
+    registrarProducto(producto){  
+        this.productos.push(producto)
+    }
 }

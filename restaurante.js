@@ -8,5 +8,4 @@ export default class Restaurante{
         this.productos = []
         this.pedidos = []
     }
-
 }

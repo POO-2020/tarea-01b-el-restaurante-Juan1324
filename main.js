@@ -22,7 +22,14 @@ class Main{
         console.log(`${this.cliente1.getPerfil()}`);
 
     }
+    probarDireccion(){
+    console.log("////////////////////Direccion///////////////////////////////////")
+    console.log(this.direccion1.getFormatoCorto())
+    console.log(this.direccion1.getFormatoExtendido())
+}
+
 }
 let app=new Main();
 app.probarCliente();
 app.probarTiempo();
+app.probarDireccion();

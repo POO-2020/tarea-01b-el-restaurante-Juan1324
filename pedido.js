@@ -10,4 +10,14 @@ export default class Pedido{
         this.cliente = cliente;
         this.NuelementosPedidos = []
     }
+    getNumeroElementos(){
+        return (`${this.NuelementosPedidos.length}`)
+    }
+    getNumeroProductos(){
+        var productoNum = 0;
+        this.NuelementosPedidos.forEach(elemento =>{
+            productoNum += elemento.cantidad 
+        })
+        return (productoNum)
+    }
 }

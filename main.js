@@ -15,7 +15,6 @@ class Main{
         this.producto=new Producto("Galletas",this.valor)
         this.elementoPedido=new ElementoPedido(12,this.producto)
  
-        
     }
     
     probarTiempo(){

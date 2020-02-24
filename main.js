@@ -7,6 +7,8 @@ import ElementoPedido from "./elementoPedido.js"
 import Fecha from "./fecha.js"
 import Pedido from "./pedido.js"
 
+import restaurante from "./restaurante.js"
+
 class Main{
     constructor(){
         

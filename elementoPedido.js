@@ -1,4 +1,4 @@
-class ElementoPedido{
+export default class ElementoPedido{
 
     constructor(cantidad, producto){
         this.producto = producto;

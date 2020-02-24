@@ -4,6 +4,8 @@ import Tiempo from "./tiempo.js"
 import Precio from "./precio.js"
 import Producto from "./producto.js"
 import ElementoPedido from "./elementoPedido.js"
+import Fecha from "./fecha.js"
+import Pedido from "./pedido.js"
 
 class Main{
     constructor(){
@@ -14,6 +16,15 @@ class Main{
         this.valor=new Precio(10.51)
         this.producto=new Producto("Galletas",this.valor)
         this.elementoPedido=new ElementoPedido(12,this.producto)
+        this.años=new Fecha(2,2,2001)
+        this.valor2=new Precio(1000.903)
+        this.valor3=new Precio(42.903)
+        this.elementoPedido1=new ElementoPedido(12,this.producto)
+        this.cantidad=(15)
+        this.cantidad2=(3)
+        this.cantidad3=(1)
+        this.pedido1= new Pedido(new Fecha(13,7,2020),new Tiempo(4,45,"pm"),new Cliente(this.cliente1))
+
  
     }
     
@@ -45,8 +56,20 @@ class Main{
         console.log("////////////////////Elementos pedidos///////////////////////////////////") 
         console.log(this.elementoPedido.getDescripcion())
     }
-
-
+    probarPedido(){
+        this.elemento = new ElementoPedido(this.cantidad,new Producto("Pescado Frito", this.valor2))
+        this.elemento2 = new ElementoPedido(this.cantidad2,new Producto("Agua de coco", this.valor3))
+        this.elemento3 = new ElementoPedido(this.cantidad3,new Producto("Pizza chica", this.valor3))
+        this.pedido1.agregarElemento(this.elemento)
+        this.pedido1.agregarElemento(this.elemento2)
+        this.pedido1.agregarElemento(this.elemento3)
+        console.log("////////////////////Pedidos///////////////////////////////////") 
+        console.log("En total son:" + this.pedido1.getNumeroElementos() + " productos distintos")
+        console.log("En total son: " + this.pedido1.getNumeroProductos()+ " productos") 
+        this.pedido1.listarElementos()
+        console.log(this.pedido1.getResumen())
+        console.log("El Total a pagar es de " + this.pedido1.getCostoTotal())
+    }
 }
 let app=new Main();
 app.probarCliente();
@@ -55,3 +78,4 @@ app.probarDireccion();
 app.probarPrecio();
 app.probarProducto();
 app.probarElementoPedido();
+app.probarPedido();

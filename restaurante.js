@@ -14,4 +14,9 @@ export default class Restaurante{
     registrarPedido(pedido){
         this.pedidos.push(pedido)
     }
+    listarProductos(){
+        this.productos.forEach(producto =>{
+            console.log('Los productos son:', producto.getDescripcion())
+        })
+    }
 }

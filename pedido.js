@@ -1,4 +1,4 @@
-class Pedido{
+export default class Pedido{
     constructor(){
         
     }

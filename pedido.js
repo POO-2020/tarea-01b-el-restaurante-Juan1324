@@ -30,4 +30,10 @@ export default class Pedido{
     agregarElemento(elemento1){
         return (`${this.NuelementosPedidos.push(elemento1)}`)
     }      
+    listarElementos(){
+        console.log("Listado de los Platillos")
+        this.NuelementosPedidos.forEach(elemento =>{
+            console.log(elemento.getDescripcion())       
+        })
+    }
 }

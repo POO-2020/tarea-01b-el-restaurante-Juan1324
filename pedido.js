@@ -20,4 +20,12 @@ export default class Pedido{
         })
         return (productoNum)
     }
+    getCostoTotal(){
+        var costo = 0;
+        this.NuelementosPedidos.forEach(elemento1 => {
+            costo += elemento1.cantidad * elemento1.producto.precio.valor
+        })
+        return (`${new Precio(costo).getPrecio()}`)
+    }
+
 }

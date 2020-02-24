@@ -34,6 +34,9 @@ export default class Pedido{
         console.log("Listado de los Platillos")
         this.NuelementosPedidos.forEach(elemento =>{
             console.log(elemento.getDescripcion())       
-        })
+        })}
+        getResumen(){
+            return (`${this.fecha.getFecha()} ${this.hora.getFormato12()} \n- ${this.getNumeroElementos()} Elementos con ${this.getNumeroProductos()} Productos.`)
+        }
+    
     }
-}

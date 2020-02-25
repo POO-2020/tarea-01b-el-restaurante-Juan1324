@@ -6,26 +6,40 @@ import Producto from "./producto.js"
 import ElementoPedido from "./elementoPedido.js"
 import Fecha from "./fecha.js"
 import Pedido from "./pedido.js"
-
-import restaurante from "./restaurante.js"
+import Restaurante from "./restaurante.js"
 
 class Main{
     constructor(){
         
         this.direccion1=new Direccion("Bahía de Manzanillo","#234","#234-A","Solidaridad","29878","Villa de Álvarez","Villa de Álvarez")
+
         this.cliente1= new Cliente("Omar Pérez",this.direccion1,"312-109-1987")
+
         this.hora1= new Tiempo(3,40,"pm")
-        this.valor=new Precio(10.51)
+        
+        this.producto1=new Producto("Pizza",this.valor)
         this.producto=new Producto("Galletas",this.valor)
+
         this.elementoPedido=new ElementoPedido(12,this.producto)
+
         this.años=new Fecha(2,2,2001)
+
+        this.valor=new Precio(10.51)
         this.valor2=new Precio(1000.903)
         this.valor3=new Precio(42.903)
+
         this.elementoPedido1=new ElementoPedido(12,this.producto)
+
         this.cantidad=(15)
         this.cantidad2=(3)
         this.cantidad3=(1)
+
         this.pedido1= new Pedido(new Fecha(13,7,2020),new Tiempo(4,45,"pm"),new Cliente(this.cliente1))
+        this.pedido2= new Pedido(new Fecha(10,3,2020),new Tiempo(2,15,"pm"),new Cliente(this.cliente2))
+
+        this.restaurante=new Restaurante("Paco El chato","312-345-2143","Bahía Díaz")
+
+        this.pedido= new Pedido(new Fecha(13,7,2020),new Tiempo(4,45,"pm"),new Cliente(this.cliente1))
 
  
     }
@@ -72,13 +86,24 @@ class Main{
         this.elemento3 = new ElementoPedido(this.cantidad3,new Producto("Pizza chica", this.valor3))
         this.pedido1.agregarElemento(this.elemento)
         this.pedido1.agregarElemento(this.elemento2)
-        this.pedido1.agregarElemento(this.elemento3)
+        this.pedido2.agregarElemento(this.elemento3)
         console.log("////////////////////Pedidos///////////////////////////////////") 
         console.log("En total son:" + this.pedido1.getNumeroElementos() + " productos distintos")
         console.log("En total son: " + this.pedido1.getNumeroProductos()+ " productos") 
         this.pedido1.listarElementos()
         console.log(this.pedido1.getResumen())
         console.log("El Total a pagar es de " + this.pedido1.getCostoTotal())
+    }
+    probarRestauran(){
+        this.restaurante.registrarProducto(this.producto)
+        this.restaurante.registrarPedido(this.pedido)
+
+        console.log("////////////////////Restaurante///////////////////////////////////")
+        console.log("////////////////////Listar Productos///////////////////////////////////")
+        this.restaurante.listarProductos()
+        console.log("////////////////////Listar Pedidos///////////////////////////////////")
+        this.restaurante.listarPedidos()
+
     }
 }
 let app=new Main();
@@ -90,3 +115,4 @@ app.probarPrecio();
 app.probarProducto();
 app.probarElementoPedido();
 app.probarPedido();
+app.probarRestauran();

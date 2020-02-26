@@ -1,3 +1,4 @@
+import Producto from "./producto.js"
 export default class ElementoPedido{
 
     constructor(cantidad, producto){
@@ -6,6 +7,6 @@ export default class ElementoPedido{
     }
     
     getDescripcion(){
-        return (`${this.cantidad} x ${this.producto.getDescripcion()}`)
+        return (`${this.cantidad} x ${this.producto.getDescripcion()}`);
     }
 }

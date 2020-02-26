@@ -4,8 +4,9 @@ export default class Cliente{
         this.nombre=nombre;
         this.direccion=direccion;
         this.telefono=telefono;
+
     }
     getPerfil(){
-        return(`${this.nombre}, ${this.direccion.getFormatoExtendido()}, ${this.telefono}`)
+        return(`${this.nombre}, ${this.direccion.getFormatoExtendido()}, ${this.telefono}`);
     }
 }

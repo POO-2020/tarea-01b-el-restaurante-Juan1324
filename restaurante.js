@@ -1,4 +1,6 @@
 import Direccion from "./direccion.js"
+import Pedido from "./pedido.js"
+
 export default class Restaurante{
 
     constructor(nombre,telefono,direccion){
@@ -9,19 +11,19 @@ export default class Restaurante{
         this.pedidos = []
     }
     registrarProducto(producto){  
-        this.productos.push(producto)
+        this.productos.push(producto);
     }
     registrarPedido(pedido){
-        this.pedidos.push(pedido)
+        this.pedidos.push(pedido);
     }
     listarProductos(){
         this.productos.forEach(producto =>{
-            console.log('Los productos son:', producto.getDescripcion())
+            console.log(producto.getDescripcion());
         })
     }
     listarPedidos(){
         this.pedidos.forEach(pedido =>{
-        console.log('Los pedidos son:', pedido.getResumen())
+        console.log(`Los pedidos son para el:, ${pedido.getResumen()}`);
         })
     }
 }

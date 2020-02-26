@@ -7,14 +7,13 @@ export default class Direccion{
         this.codigoPostal=codigoPostal;
         this.ciudad=ciudad;
         this.municipio=municipio;
-
     }
     getFormatoCorto(){
-        return(`${this.calle} ${this.numeroExterior}`)
+        return(`${this.calle} ${this.numeroExterior}`);
 
     }
     getFormatoExtendido(){
-        return(`${this.calle} ${this.numeroExterior},  Núemro interior ${this.numeroInterior}, Colonia ${this.colonia}, Código postal ${this.codigoPostal}, Ciudad ${this.ciudad}, Municipio ${this.municipio}`)
+        return(`${this.calle} ${this.numeroExterior},  Núemro interior ${this.numeroInterior}, Colonia ${this.colonia}, Código postal ${this.codigoPostal}, Ciudad ${this.ciudad}, Municipio ${this.municipio}`);
 
     }
 }
